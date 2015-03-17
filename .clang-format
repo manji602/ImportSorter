@@ -1,0 +1,12 @@
+---
+BasedOnStyle:  Google
+ColumnLimit: 100
+IndentWidth: 4
+BreakBeforeBraces: Linux
+ObjCSpaceAfterProperty: true
+ObjCSpaceBeforeProtocolList: true
+ObjCBlockIndentWidth: 4
+AllowShortFunctionsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+UseTab: Never

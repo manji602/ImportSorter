@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240F9C7A1AB873560038A0F8 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F9C791AB873560038A0F8 /* Preferences.m */; };
+		243BD5FE1AAFBC1100E5323B /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243BD5FD1AAFBC1100E5323B /* AppKit.framework */; };
+		243BD6001AAFBC1100E5323B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243BD5FF1AAFBC1100E5323B /* Foundation.framework */; };
+		243BD6051AAFBC1100E5323B /* ImportSorter.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 243BD6041AAFBC1100E5323B /* ImportSorter.xcscheme */; };
+		243BD6081AAFBC1100E5323B /* ImportSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BD6071AAFBC1100E5323B /* ImportSorter.m */; };
+		243BD6171AAFBD6B00E5323B /* ObjCClassRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BD6101AAFBD6B00E5323B /* ObjCClassRole.m */; };
+		243BD6181AAFBD6B00E5323B /* ObjCImportSorterRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BD6121AAFBD6B00E5323B /* ObjCImportSorterRunner.m */; };
+		243BD6191AAFBD6B00E5323B /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BD6161AAFBD6B00E5323B /* XcodeHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		240F9C781AB873560038A0F8 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		240F9C791AB873560038A0F8 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		243BD5FA1AAFBC1100E5323B /* ImportSorter.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImportSorter.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		243BD5FD1AAFBC1100E5323B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		243BD5FF1AAFBC1100E5323B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		243BD6031AAFBC1100E5323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243BD6041AAFBC1100E5323B /* ImportSorter.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ImportSorter.xcscheme; path = ImportSorter.xcodeproj/xcshareddata/xcschemes/ImportSorter.xcscheme; sourceTree = SOURCE_ROOT; };
+		243BD6061AAFBC1100E5323B /* ImportSorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportSorter.h; sourceTree = "<group>"; };
+		243BD6071AAFBC1100E5323B /* ImportSorter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportSorter.m; sourceTree = "<group>"; };
+		243BD60F1AAFBD6B00E5323B /* ObjCClassRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCClassRole.h; sourceTree = "<group>"; };
+		243BD6101AAFBD6B00E5323B /* ObjCClassRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCClassRole.m; sourceTree = "<group>"; };
+		243BD6111AAFBD6B00E5323B /* ObjCImportSorterRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCImportSorterRunner.h; sourceTree = "<group>"; };
+		243BD6121AAFBD6B00E5323B /* ObjCImportSorterRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCImportSorterRunner.m; sourceTree = "<group>"; };
+		243BD6141AAFBD6B00E5323B /* XcodeComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeComponents.h; sourceTree = "<group>"; };
+		243BD6151AAFBD6B00E5323B /* XcodeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
+		243BD6161AAFBD6B00E5323B /* XcodeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		243BD5F81AAFBC1100E5323B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				243BD5FE1AAFBC1100E5323B /* AppKit.framework in Frameworks */,
+				243BD6001AAFBC1100E5323B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		243BD5F11AAFBC1100E5323B = {
+			isa = PBXGroup;
+			children = (
+				243BD6011AAFBC1100E5323B /* ImportSorter */,
+				243BD5FC1AAFBC1100E5323B /* Frameworks */,
+				243BD5FB1AAFBC1100E5323B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		243BD5FB1AAFBC1100E5323B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				243BD5FA1AAFBC1100E5323B /* ImportSorter.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		243BD5FC1AAFBC1100E5323B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				243BD5FD1AAFBC1100E5323B /* AppKit.framework */,
+				243BD5FF1AAFBC1100E5323B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		243BD6011AAFBC1100E5323B /* ImportSorter */ = {
+			isa = PBXGroup;
+			children = (
+				243BD6061AAFBC1100E5323B /* ImportSorter.h */,
+				243BD6071AAFBC1100E5323B /* ImportSorter.m */,
+				243BD60E1AAFBD6B00E5323B /* ObjC */,
+				243BD6131AAFBD6B00E5323B /* Utils */,
+				243BD6021AAFBC1100E5323B /* Supporting Files */,
+			);
+			path = ImportSorter;
+			sourceTree = "<group>";
+		};
+		243BD6021AAFBC1100E5323B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				243BD6031AAFBC1100E5323B /* Info.plist */,
+				243BD6041AAFBC1100E5323B /* ImportSorter.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		243BD60E1AAFBD6B00E5323B /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				243BD60F1AAFBD6B00E5323B /* ObjCClassRole.h */,
+				243BD6101AAFBD6B00E5323B /* ObjCClassRole.m */,
+				243BD6111AAFBD6B00E5323B /* ObjCImportSorterRunner.h */,
+				243BD6121AAFBD6B00E5323B /* ObjCImportSorterRunner.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
+		243BD6131AAFBD6B00E5323B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				240F9C781AB873560038A0F8 /* Preferences.h */,
+				240F9C791AB873560038A0F8 /* Preferences.m */,
+				243BD6141AAFBD6B00E5323B /* XcodeComponents.h */,
+				243BD6151AAFBD6B00E5323B /* XcodeHelper.h */,
+				243BD6161AAFBD6B00E5323B /* XcodeHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		243BD5F91AAFBC1100E5323B /* ImportSorter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 243BD60B1AAFBC1100E5323B /* Build configuration list for PBXNativeTarget "ImportSorter" */;
+			buildPhases = (
+				243BD5F61AAFBC1100E5323B /* Sources */,
+				243BD5F71AAFBC1100E5323B /* Resources */,
+				243BD5F81AAFBC1100E5323B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImportSorter;
+			productName = ImportSorter;
+			productReference = 243BD5FA1AAFBC1100E5323B /* ImportSorter.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		243BD5F21AAFBC1100E5323B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jun Hashimoto";
+				TargetAttributes = {
+					243BD5F91AAFBC1100E5323B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 243BD5F51AAFBC1100E5323B /* Build configuration list for PBXProject "ImportSorter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 243BD5F11AAFBC1100E5323B;
+			productRefGroup = 243BD5FB1AAFBC1100E5323B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				243BD5F91AAFBC1100E5323B /* ImportSorter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		243BD5F71AAFBC1100E5323B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				243BD6051AAFBC1100E5323B /* ImportSorter.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		243BD5F61AAFBC1100E5323B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				243BD6181AAFBD6B00E5323B /* ObjCImportSorterRunner.m in Sources */,
+				243BD6171AAFBD6B00E5323B /* ObjCClassRole.m in Sources */,
+				243BD6081AAFBC1100E5323B /* ImportSorter.m in Sources */,
+				243BD6191AAFBD6B00E5323B /* XcodeHelper.m in Sources */,
+				240F9C7A1AB873560038A0F8 /* Preferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		243BD6091AAFBC1100E5323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		243BD60A1AAFBC1100E5323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+		243BD60C1AAFBC1100E5323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ImportSorter/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		243BD60D1AAFBC1100E5323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ImportSorter/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		243BD5F51AAFBC1100E5323B /* Build configuration list for PBXProject "ImportSorter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				243BD6091AAFBC1100E5323B /* Debug */,
+				243BD60A1AAFBC1100E5323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		243BD60B1AAFBC1100E5323B /* Build configuration list for PBXNativeTarget "ImportSorter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				243BD60C1AAFBC1100E5323B /* Debug */,
+				243BD60D1AAFBC1100E5323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 243BD5F21AAFBC1100E5323B /* Project object */;
+}
