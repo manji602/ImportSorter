@@ -29,7 +29,7 @@ $ open ImportSorter.xcodeproj
 
 Second, build this project and reboot Xcode.
 
-Then, there will be "Sort Import" option on Xcode "Edit" menu.
+Then, there will be "Import Sorter" option on Xcode "Edit" menu.
 
 ## Usage
 
@@ -37,7 +37,7 @@ Then, there will be "Sort Import" option on Xcode "Edit" menu.
 
 ![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure001.png)
 
-2.Press CTRL + S or select "Sort Import" option from "Edit" menu.
+2.Press CTRL + S or select "Sort Import On Current File" option from "Import Sorter" menu.
 
 ![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure002.png)
 
