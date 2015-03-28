@@ -35,15 +35,15 @@ Then, there will be "Sort Import" option on Xcode "Edit" menu.
 
 1.Open source code which you want to sort import declarations on Xcode.
 
-![](http://github.com/manji602/ImportSorter/raw/master/Images/usage_figure001.png)
+![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure001.png)
 
 2.Press CTRL + S or select "Sort Import" option from "Edit" menu.
 
-![](http://github.com/manji602/ImportSorter/raw/master/Images/usage_figure002.png)
+![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure002.png)
 
 3.Then, your import declarations will be sorted :)
 
-![](http://github.com/manji602/ImportSorter/raw/master/Images/usage_figure003.png)
+![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure003.png)
 
 ## License
 
