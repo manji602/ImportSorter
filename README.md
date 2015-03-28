@@ -39,6 +39,10 @@ Then, there will be "Sort Import" option on Xcode "Edit" menu.
 
 3.Then, your import declarations will be sorted :)
 
+## License
+
+This plugin is released under the MIT License. See [LICENSE.txt](http://github.com/manji602/ImportSorter/raw/master/LICENSE.txt).
+
 ## Author
 
 [Jun HASHIMOTO](http://github.com/manji602)
