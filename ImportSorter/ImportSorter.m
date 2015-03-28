@@ -10,6 +10,7 @@
 // :: Other ::
 #import "ObjCImportSorterRunner.h"
 #import "Preferences.h"
+#import "SwiftImportSorterRunner.h"
 #import "XcodeHelper.h"
 
 static ImportSorter *sharedPlugin;
@@ -76,8 +77,6 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
 {
     [_menu removeAllItems];
     [self addSortOnClickMenuItem];
-    [_menu addItem:[NSMenuItem separatorItem]];
-    [self addSortOnSaveMenuItem];
 }
 
 - (void)addSortOnClickMenuItem
@@ -86,26 +85,15 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
                                                              action:@selector(sortImport)
                                                       keyEquivalent:IMPORT_SORT_SHORTCUT_KEY];
 
+    [sortOnClickItem setKeyEquivalentModifierMask:NSControlKeyMask];
     [sortOnClickItem setTarget:self];
     [_menu addItem:sortOnClickItem];
-}
-
-- (void)addSortOnSaveMenuItem
-{
-    BOOL sortOnSave = [self sortOnSave];
-    NSString *menuItemTitle = sortOnSave ? @"Enable Sort on Save" : @"Disable Sort on Save";
-
-    NSMenuItem *sortOnSaveItem = [[NSMenuItem alloc] initWithTitle:menuItemTitle
-                                                            action:@selector(toggleSortOnSave)
-                                                     keyEquivalent:@""];
-
-    [sortOnSaveItem setTarget:self];
-    [_menu addItem:sortOnSaveItem];
 }
 
 - (void)sortImport
 {
     [self sortObjCImport];
+    [self sortSwiftImport];
 }
 
 - (BOOL)isObjCFile
@@ -114,6 +102,14 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
     NSString *pathExtension = [document.fileURL.absoluteString pathExtension];
 
     return [@[ @"m", @"h" ] containsObject:pathExtension];
+}
+
+- (BOOL)isSwiftFile
+{
+    IDESourceCodeDocument *document = [XcodeHelper currentDocument];
+    NSString *pathExtension = [document.fileURL.absoluteString pathExtension];
+
+    return [@[ @"swift" ] containsObject:pathExtension];
 }
 
 - (void)sortObjCImport
@@ -130,24 +126,18 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
     [runner run];
 }
 
-- (BOOL)sortOnSave
+- (void)sortSwiftImport
 {
-    return [[_preferences objectForKey:[self sortOnSavePreferenceKey]] boolValue];
-}
+    if (![self isSwiftFile]) {
+        return;
+    }
 
-- (void)toggleSortOnSave
-{
-    BOOL sortOnSave = ![self sortOnSave];
+    NSTextView *textView = [XcodeHelper currentSourceCodeView];
+    IDESourceCodeDocument *document = [XcodeHelper currentDocument];
 
-    [_preferences setObject:@(sortOnSave) forKey:[self sortOnSavePreferenceKey]];
-    [_preferences synchronize];
-
-    [self configureSubMenuItems];
-}
-
-- (NSString *)sortOnSavePreferenceKey
-{
-    return [self.bundle.bundleIdentifier stringByAppendingString:@".sortOnSave"];
+    SwiftImportSorterRunner *runner =
+        [[SwiftImportSorterRunner alloc] initWithTextView:textView document:document];
+    [runner run];
 }
 
 - (void)dealloc

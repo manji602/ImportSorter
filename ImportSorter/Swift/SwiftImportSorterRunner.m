@@ -1,24 +1,24 @@
 //
-//  ObjCImportSorterRunner.m
+//  SwiftImportSorterRunner.m
 //  ImportSorter
 //
-//  Created by Jun Hashimoto on 2015/03/10.
+//  Created by jun.hashimoto on 2015/03/28.
 //  Copyright (c) 2015年 Jun Hashimoto. All rights reserved.
 //
 
-#import "ObjCImportSorterRunner.h"
+#import "SwiftImportSorterRunner.h"
 // :: Other ::
-#import "ObjCClassRole.h"
+#import "SwiftClassRole.h"
 
-@interface ObjCImportSorterRunner ()
-@property (nonatomic) ObjCClassRole *classRole;
+@interface SwiftImportSorterRunner ()
+@property (nonatomic) SwiftClassRole *classRole;
 @end
 
-@implementation ObjCImportSorterRunner
+@implementation SwiftImportSorterRunner
 
 #pragma mark - public methods
 
-static NSString *const kImportDeclarationPrefix = @"#import ";
+static NSString *const kImportDeclarationPrefix = @"import ";
 static NSString *const kClassRoleLabelPrefix = @"// :: ";
 
 - (instancetype)initWithTextView:(NSTextView *)textView document:(IDESourceCodeDocument *)document
@@ -28,8 +28,7 @@ static NSString *const kClassRoleLabelPrefix = @"// :: ";
     if (self) {
         _sourceCodeView = textView;
         _sourceCodeDocument = document;
-        NSString *originalClassName = [self originalClassName];
-        _classRole = [[ObjCClassRole alloc] initWithOriginalClassName:originalClassName];
+        _classRole = [[SwiftClassRole alloc] init];
     }
     return self;
 }
@@ -49,12 +48,6 @@ static NSString *const kClassRoleLabelPrefix = @"// :: ";
 }
 
 #pragma mark - private methods
-- (NSString *)originalClassName
-{
-    NSString *fileName = [_sourceCodeDocument.fileURL.absoluteString lastPathComponent];
-    return [fileName stringByDeletingPathExtension];
-}
-
 - (NSArray *)exportImportDeclarations
 {
     NSString *sourceString = _sourceCodeView.textStorage.string;
@@ -128,7 +121,7 @@ static NSString *const kClassRoleLabelPrefix = @"// :: ";
 
     // #import宣言をしている行毎にClassRoleを割り振り、上述のNSArrayに代入する
     for (NSString *importDeclaration in originalImportDeclarations) {
-        ObjCImportClassRole importClassRole = [_classRole getImportClassRole:importDeclaration];
+        SwiftImportClassRole importClassRole = [_classRole getImportClassRole:importDeclaration];
         NSMutableArray *arrayByImportRole = importDeclarationsArray[importClassRole];
         [arrayByImportRole addObject:importDeclaration];
 

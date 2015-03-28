@@ -31,6 +31,9 @@ static NSString *const kClassRoleLabelSuffix = @" ::\n";
     return self;
 }
 
+/**
+ * NOTE : please edit this method if you want customize role.
+ */
 - (ObjCImportClassRole)getImportClassRole:(NSString *)targetString
 {
     NSString *selfClassRegExp =
@@ -47,6 +50,9 @@ static NSString *const kClassRoleLabelSuffix = @" ::\n";
     return ObjCImportClassRoleOther;
 }
 
+/**
+ * NOTE : please edit this method if you want customize role.
+ */
 - (NSString *)labelForClassRole:(ObjCImportClassRole)classRole
 {
     switch (classRole) {
@@ -61,6 +67,9 @@ static NSString *const kClassRoleLabelSuffix = @" ::\n";
     }
 }
 
+/**
+ * NOTE : please edit this method if you want customize role.
+ */
 - (NSInteger)lastImportClassRoleIndex
 {
     return ObjCImportClassRoleOther;

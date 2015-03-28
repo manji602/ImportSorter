@@ -9,6 +9,9 @@
 // :: Framework ::
 #import <Foundation/Foundation.h>
 
+/**
+ * NOTE : please edit this enum if you want customize role.
+ */
 typedef NS_ENUM(NSInteger, ObjCImportClassRole) {
     ObjCImportClassRoleSelf = 0,
     ObjCImportClassRoleFramework,
