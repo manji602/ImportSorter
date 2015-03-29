@@ -45,6 +45,23 @@ Then, there will be "Import Sorter" option on Xcode "Edit" menu.
 
 ![](https://raw.githubusercontent.com/manji602/ImportSorter/master/Images/usage_figure003.png)
 
+## Customize
+
+### Customize Import Role
+
+To customize import role of Objective-C, please edit files listed below.
+
+* (1) : `ObjCImportClassRole` in `ObjCClassRole.h`
+    * It defines class role of objective-c.
+* (2) : `getImportClassRole` in `ObjCClassRole.m`
+    * This function categorizes class role.
+* (3) : `labelForClassRole` in `ObjCClassRole.m`
+    * This function defines a label for each role. This Label must begin with `kClassRoleLabelPrefix`.
+* (4) : `lastImportClassRoleIndex` in `ObjCClassRole.m`
+    * This function defines last objects of enum you defined in (1).
+
+In case of customizing import role of Swift, please edit `SwiftClassRole.h` and `SwiftClassRole.m`.
+
 ## License
 
 This plugin is released under the MIT License. See [LICENSE.txt](http://github.com/manji602/ImportSorter/raw/master/LICENSE.txt).

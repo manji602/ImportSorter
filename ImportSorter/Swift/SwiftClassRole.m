@@ -12,7 +12,7 @@
 
 /**
  * NOTE : if you customize original role, labelForClassRole must
- * begin with kClassRoleLabelPrefix and end with kClassRoleLabelSuffix.
+ * begin with kClassRoleLabelPrefix.
  */
 static NSString *const kClassRoleLabelPrefix = @"// :: ";
 static NSString *const kClassRoleLabelSuffix = @" ::\n";

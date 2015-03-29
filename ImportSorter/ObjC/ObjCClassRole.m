@@ -15,7 +15,10 @@
 @implementation ObjCClassRole
 
 static NSString *const kFrameworkLibraryRegExp = @"#import <.*>";
-
+/**
+ * NOTE : if you customize original role, labelForClassRole must
+ * begin with kClassRoleLabelPrefix.
+ */
 static NSString *const kClassRoleLabelPrefix = @"// :: ";
 static NSString *const kClassRoleLabelSuffix = @" ::\n";
 
