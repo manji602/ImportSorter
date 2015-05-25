@@ -49,8 +49,11 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
         // reference to plugin's bundle, for resource access
         _bundle = plugin;
         _preferences = [[Preferences alloc] initWithApplicationID:self.bundle.bundleIdentifier];
-
-        [self addMenuItem];
+		
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+			[self addMenuItem];
+		}];
+		
     }
     return self;
 }
