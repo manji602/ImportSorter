@@ -8,6 +8,7 @@
 
 #import "ImportSorter.h"
 // :: Other ::
+#import "CPlusPlusImportSorterRunner.h"
 #import "ObjCImportSorterRunner.h"
 #import "Preferences.h"
 #import "SwiftImportSorterRunner.h"
@@ -96,7 +97,16 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
 - (void)sortImport
 {
     [self sortObjCImport];
+    [self sortCPlusPlusImport];
     [self sortSwiftImport];
+}
+
+- (BOOL)isCPlusPlusFile
+{
+    IDESourceCodeDocument *document = [XcodeHelper currentDocument];
+    NSString *pathExtension = [document.fileURL.absoluteString pathExtension];
+    
+    return [@[ @"cpp", @"hpp", @"h" ] containsObject:pathExtension];
 }
 
 - (BOOL)isObjCFile
@@ -113,6 +123,20 @@ static NSString *const IMPORT_SORT_SHORTCUT_KEY = @"s";
     NSString *pathExtension = [document.fileURL.absoluteString pathExtension];
 
     return [@[ @"swift" ] containsObject:pathExtension];
+}
+
+- (void)sortCPlusPlusImport
+{
+    if (![self isCPlusPlusFile]) {
+        return;
+    }
+    
+    NSTextView *textView = [XcodeHelper currentSourceCodeView];
+    IDESourceCodeDocument *document = [XcodeHelper currentDocument];
+    
+    CPlusPlusImportSorterRunner *runner =
+        [[CPlusPlusImportSorterRunner alloc] initWithTextView:textView document:document];
+    [runner run];
 }
 
 - (void)sortObjCImport

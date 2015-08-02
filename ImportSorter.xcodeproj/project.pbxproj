@@ -17,6 +17,8 @@
 		243BD6191AAFBD6B00E5323B /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BD6161AAFBD6B00E5323B /* XcodeHelper.m */; };
 		24B864D51AC6DDAE009ADFAD /* SwiftClassRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B864D41AC6DDAE009ADFAD /* SwiftClassRole.m */; };
 		24B864D81AC6E302009ADFAD /* SwiftImportSorterRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B864D71AC6E302009ADFAD /* SwiftImportSorterRunner.m */; };
+		24E0E2BD1B6D9F270019FCA9 /* CPlusPlusClassRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0E2BC1B6D9F270019FCA9 /* CPlusPlusClassRole.m */; };
+		24E0E2C01B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0E2BF1B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		24B864D41AC6DDAE009ADFAD /* SwiftClassRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftClassRole.m; sourceTree = "<group>"; };
 		24B864D61AC6E302009ADFAD /* SwiftImportSorterRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftImportSorterRunner.h; sourceTree = "<group>"; };
 		24B864D71AC6E302009ADFAD /* SwiftImportSorterRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftImportSorterRunner.m; sourceTree = "<group>"; };
+		24E0E2BB1B6D9F270019FCA9 /* CPlusPlusClassRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPlusPlusClassRole.h; path = CPlusPlus/CPlusPlusClassRole.h; sourceTree = "<group>"; };
+		24E0E2BC1B6D9F270019FCA9 /* CPlusPlusClassRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPlusPlusClassRole.m; path = CPlusPlus/CPlusPlusClassRole.m; sourceTree = "<group>"; };
+		24E0E2BE1B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPlusPlusImportSorterRunner.h; path = CPlusPlus/CPlusPlusImportSorterRunner.h; sourceTree = "<group>"; };
+		24E0E2BF1B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPlusPlusImportSorterRunner.m; path = CPlusPlus/CPlusPlusImportSorterRunner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			children = (
 				243BD6061AAFBC1100E5323B /* ImportSorter.h */,
 				243BD6071AAFBC1100E5323B /* ImportSorter.m */,
+				24E0E2B81B6D9ECC0019FCA9 /* CPlusPlus */,
 				243BD60E1AAFBD6B00E5323B /* ObjC */,
 				24B864D21AC6DD9B009ADFAD /* Swift */,
 				243BD6131AAFBD6B00E5323B /* Utils */,
@@ -135,6 +142,17 @@
 				24B864D71AC6E302009ADFAD /* SwiftImportSorterRunner.m */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		24E0E2B81B6D9ECC0019FCA9 /* CPlusPlus */ = {
+			isa = PBXGroup;
+			children = (
+				24E0E2BB1B6D9F270019FCA9 /* CPlusPlusClassRole.h */,
+				24E0E2BC1B6D9F270019FCA9 /* CPlusPlusClassRole.m */,
+				24E0E2BE1B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.h */,
+				24E0E2BF1B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.m */,
+			);
+			name = CPlusPlus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B864D51AC6DDAE009ADFAD /* SwiftClassRole.m in Sources */,
+				24E0E2C01B6DA25B0019FCA9 /* CPlusPlusImportSorterRunner.m in Sources */,
 				243BD6181AAFBD6B00E5323B /* ObjCImportSorterRunner.m in Sources */,
+				24E0E2BD1B6D9F270019FCA9 /* CPlusPlusClassRole.m in Sources */,
 				24B864D81AC6E302009ADFAD /* SwiftImportSorterRunner.m in Sources */,
 				243BD6171AAFBD6B00E5323B /* ObjCClassRole.m in Sources */,
 				243BD6081AAFBC1100E5323B /* ImportSorter.m in Sources */,
