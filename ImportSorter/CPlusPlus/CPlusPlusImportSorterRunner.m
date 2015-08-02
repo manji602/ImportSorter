@@ -25,8 +25,11 @@ static NSString *const kClassRoleLabelPrefix = @"// :: ";
     self = [super init];
     
     if (self) {
-        _sourceCodeView = textView;
-        _sourceCodeDocument = document;
+        self.sourceCodeView = textView;
+        self.sourceCodeDocument = document;
+        self.importDeclarationPrefix = kImportDeclarationPrefix;
+        self.classRoleLabelPrefix = kClassRoleLabelPrefix;
+
         NSString *originalClassName = [self originalClassName];
         _classRole = [[CPlusPlusClassRole alloc] initWithOriginalClassName:originalClassName];
     }
@@ -50,67 +53,8 @@ static NSString *const kClassRoleLabelPrefix = @"// :: ";
 #pragma mark - private methods
 - (NSString *)originalClassName
 {
-    NSString *fileName = [_sourceCodeDocument.fileURL.absoluteString lastPathComponent];
+    NSString *fileName = [self.sourceCodeDocument.fileURL.absoluteString lastPathComponent];
     return [fileName stringByDeletingPathExtension];
-}
-
-- (NSArray *)exportImportDeclarations
-{
-    NSString *sourceString = _sourceCodeView.textStorage.string;
-    NSRange range = NSMakeRange(0, sourceString.length);
-    
-    NSMutableArray *importDeclarationsArray = [NSMutableArray array];
-    while (range.length > 0) {
-        NSRange subRange = [sourceString lineRangeForRange:NSMakeRange(range.location, 0)];
-        
-        NSString *line = [sourceString substringWithRange:subRange];
-        if ([line hasPrefix:kImportDeclarationPrefix]) {
-            [importDeclarationsArray addObject:line];
-        }
-        
-        range.location = NSMaxRange(subRange);
-        range.length -= subRange.length;
-    }
-    
-    return [importDeclarationsArray copy];
-}
-
-- (void)insertSortedImportDeclaration:(NSString *)importDeclarations
-{
-    NSRange replacementRange = [self getReplacementRange];
-    [_sourceCodeView insertText:importDeclarations replacementRange:replacementRange];
-}
-
-- (NSRange)getReplacementRange
-{
-    NSInteger replaceLength = 0;
-    NSInteger replaceBeginLocation = 0;
-    NSInteger replaceEndLocation = 0;
-    BOOL hasSetBeginLocation = NO;
-    
-    NSString *sourceString = _sourceCodeView.textStorage.string;
-    NSRange range = NSMakeRange(0, sourceString.length);
-    
-    NSMutableArray *importDeclarationsArray = [NSMutableArray array];
-    while (range.length > 0) {
-        NSRange subRange = [sourceString lineRangeForRange:NSMakeRange(range.location, 0)];
-        
-        NSString *line = [sourceString substringWithRange:subRange];
-        if ([line hasPrefix:kImportDeclarationPrefix] || [line hasPrefix:kClassRoleLabelPrefix]) {
-            [importDeclarationsArray addObject:line];
-            if (!hasSetBeginLocation) {
-                hasSetBeginLocation = YES;
-                replaceBeginLocation = subRange.location;
-            }
-            replaceEndLocation = subRange.location + subRange.length;
-        }
-        
-        range.location = NSMaxRange(subRange);
-        range.length -= subRange.length;
-    }
-    replaceLength = MAX(replaceEndLocation - replaceBeginLocation, 0);
-    
-    return NSMakeRange(replaceBeginLocation, replaceLength);
 }
 
 - (NSArray *)sortImportDeclarations:(NSArray *)originalImportDeclarations

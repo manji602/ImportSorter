@@ -10,14 +10,10 @@
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
 // :: Other ::
+#import "BaseImportSorterRunner.h"
 #import "XcodeComponents.h"
 
-@interface ObjCImportSorterRunner : NSObject
-
-@property (nonatomic) NSTextView *sourceCodeView;
-@property (nonatomic) IDESourceCodeDocument *sourceCodeDocument;
-
+@interface ObjCImportSorterRunner : BaseImportSorterRunner
 - (instancetype)initWithTextView:(NSTextView *)textView document:(IDESourceCodeDocument *)document;
 - (void)run;
-
 @end
