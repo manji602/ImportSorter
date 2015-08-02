@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=1.0.1
+VERSION=1.0.2
 DOWNLOAD_URI="http://github.com/manji602/ImportSorter/releases/download/${VERSION}/ImportSorter.tar.gz"
 PLUGINS_DIR="${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
 
