@@ -62,11 +62,8 @@ static NSString *const kClassRoleLabelSuffix = @" ::\n";
         case ObjCImportClassRoleSelf:
             return @"";
         case ObjCImportClassRoleFramework:
-            return [NSString stringWithFormat:@"%@%@%@", kClassRoleLabelPrefix, @"Framework",
-                                              kClassRoleLabelSuffix];
         case ObjCImportClassRoleOther:
-            return [NSString
-                stringWithFormat:@"%@%@%@", kClassRoleLabelPrefix, @"Other", kClassRoleLabelSuffix];
+            return @"\n";
     }
 }
 
